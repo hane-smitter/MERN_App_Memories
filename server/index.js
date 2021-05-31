@@ -15,9 +15,12 @@ app.use(cors());
 //connect to database
 conn();
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 app.use('/posts', PostsRoutes);
+app.get('/', (req, res) => {
+    res.send('Hello memories API');
+});
 
 app.listen(PORT, () => {
     console.log(`app is listening on port: ${PORT}`);

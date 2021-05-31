@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-var CONNECTION_URL = "mongodb://127.0.0.1:27017/memories";
+var CONNECTION_URL = process.env.CONNECTION_URL;
 
 const connect = async() => {
     try {
